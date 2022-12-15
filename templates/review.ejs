@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit A Review</title>
+</head>
+<script>
+    function confirmation() {
+        return confirm("Are you sure you want to submit your review?")
+    }
+</script>
+<body>
+    <h1>Review Form</h1>
+    <form action="./submitReview" method="post" onsubmit="return confirmation();">
+		<fieldset>
+            
+			<label><b>Prof. name (case sensitive):</b> <input type="text" name="profname"/></label>
+			<label><b>Your name:</b> <input type="text" name="studname"></label>
+            <br>
+            <br>
+            <label><b>Rate the professor 1-5:</b> <input type="number" name="rating"></label>
+            <br>
+            <br>
+            <b>Your thoughts, criticisms, etc. :</b>
+            <br>
+            <label><textarea rows="5" cols="80" name="reviewtext"></textarea></label>
+		</fieldset>
+
+
+		<br>
+		<input type="reset" />
+		<input type="submit" value="Submit Review"/>
+	</form>
+    <br>
+    <hr>
+    <a href="/"><u>HOME</u></a>
+</body>
+</html>
