@@ -7,7 +7,7 @@ const statusCode = 200;
 const bodyParser = require("body-parser");
 let fs = require("fs");
 require("dotenv").config({ path: path.resolve(__dirname, 'credentials/.env') }) 
-
+const fetch = require('node-fetch')
 const userName = process.env.MONGO_DB_USERNAME;
 const password = process.env.MONGO_DB_PASSWORD;
 
@@ -83,7 +83,7 @@ app.post("/forum", async(request, response) => {
     
 
     try {
-        fetch(url)
+        await fetch(url)
         .then(response => response.json())
         .then(json => printTitles(json))
     } catch(e) {
