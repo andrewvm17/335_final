@@ -11,7 +11,7 @@ require("dotenv").config({ path: path.resolve(__dirname, 'credentials/.env') })
 const userName = process.env.MONGO_DB_USERNAME;
 const password = process.env.MONGO_DB_PASSWORD;
 
-const portNumber = process.argv[2];
+const portNumber = 10000
 
 const databaseAndCollection = {db: "CMSC335DB", collection:"campApplicants"};
 const { MongoClient, ServerApiVersion } = require('mongodb');
@@ -20,7 +20,7 @@ const { response } = require('express');
 
 
 
-if (process.argv.length != 3) {
+if (process.argv.length != 2) {
     console.log(`Usage ${process.argv[1]} jsonFile`);
     process.exit(1);
 }
