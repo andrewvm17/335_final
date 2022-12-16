@@ -81,10 +81,14 @@ app.post("/forum", async(request, response) => {
 
     let url = 'https://planetterp.com/api/v1/professor?name=' + variables.professor + '&reviews=true';
     
-    fetch(url)
+
+    try {
+        fetch(url)
         .then(response => response.json())
         .then(json => printTitles(json))
-        .catch(error => console.log("Reporting error: " + error));
+    } catch(e) {
+        console.log(e);
+    }
    
     function printTitles(json) {
         variables = {
