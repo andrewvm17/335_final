@@ -41,19 +41,6 @@ app.get("/", async(request, response) => {
     response.render("index");
 })
 
-async function getUsers(prof) {
-    let url = 'https://planetterp.com/api/v1/professor?name=' + prof + '&reviews=true';
-    
-        fetch(url)
-            .then(response => response.json())
-            .then(json => printTitles(json))
-            .catch(error => console.log("Reporting error: " + error));
-       
-        function printTitles(json) {
-            console.log(json.average_rating)
-            console.log(json);
-        }
-}
 
 app.get("/forum", (request, response) => {
     response.render("forum");
