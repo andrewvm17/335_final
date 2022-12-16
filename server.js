@@ -151,21 +151,8 @@ async function insertReview(client, databaseAndCollection, newReview) {
 
 
 
-console.log(`type stop to shutdown the server: `);
 process.stdin.setEncoding("utf8");
 
-process.stdin.on('readable', () => {
-	let dataInput = process.stdin.read();
-	if (dataInput !== null) {
-		let command = dataInput.trim();
-		if (command === "stop") {
-			console.log("Shutting down the server");
-            process.exit(0);  /* exiting */
-        } else {
-            console.log(`Invalid command: ${command}`);
-        }
-        process.stdin.resume();
-    } 
-});
+
 
 app.listen(portNumber); 
