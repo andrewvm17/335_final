@@ -12,7 +12,7 @@ const password = process.env.MONGO_DB_PASSWORD;
 const fetch = require('node-fetch')
 const portNumber = 10000
 
-const databaseAndCollection = {db: "CMSC335DB", collection:"campApplicants"};
+const databaseAndCollection = {db: "335final", collection:"reviews"};
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const { response } = require('express');
 
