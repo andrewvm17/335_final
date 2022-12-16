@@ -7,6 +7,7 @@ const statusCode = 200;
 const bodyParser = require("body-parser");
 let fs = require("fs");
 require("dotenv").config({ path: path.resolve(__dirname, 'credentials/.env') }) 
+import fetch from "node-fetch";
 
 const userName = process.env.MONGO_DB_USERNAME;
 const password = process.env.MONGO_DB_PASSWORD;
