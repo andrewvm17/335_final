@@ -9,7 +9,7 @@ let fs = require("fs");
 require("dotenv").config({ path: path.resolve(__dirname, 'credentials/.env') }) 
 const userName = process.env.MONGO_DB_USERNAME;
 const password = process.env.MONGO_DB_PASSWORD;
-const fetch = require('node-fetch@2')
+const fetch = require('node-fetch')
 const portNumber = 10000
 
 const databaseAndCollection = {db: "CMSC335DB", collection:"campApplicants"};
