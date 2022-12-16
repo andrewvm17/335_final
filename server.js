@@ -131,7 +131,7 @@ app.post("/submitReview", async(request, response) => {
     }
 
     
-    response.render("reviewConfirmation", variables);
+    response.render("reviewconfirmation", variables);
 })
 
 
